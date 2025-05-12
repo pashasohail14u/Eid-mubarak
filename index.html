@@ -1,0 +1,375 @@
+<script type="text/javascript">
+	atOptions = {
+		'key' : '7c46b95c7c872df3b5d43aedd19e0352',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//allowsalmond.com/7c46b95c7c872df3b5d43aedd19e0352/invoke.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak Greetings</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN for WhatsApp Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --primary-green: #006400; /* Dark Green */
+            --accent-gold: #b8860b;   /* DarkGoldenrod */
+            --light-gold: #FFD700;   /* Gold */
+            --whatsapp-green: #25D366; /* WhatsApp Green */
+            --background-start: #e8f5e9; /* Very light green */
+            --background-end: #fffdef;   /* Light yellow/cream */
+            --text-dark: #333;
+            --text-light: #555;
+            --container-bg: #ffffff;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 95vh;
+            background: linear-gradient(135deg, var(--background-start), var(--background-end));
+            text-align: center;
+            padding: 20px;
+            color: var(--text-dark);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background-color: var(--container-bg);
+            padding: 35px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 70, 0, 0.15);
+            max-width: 550px;
+            width: 90%;
+            border: 1.5px solid var(--accent-gold);
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        img.eid-gif {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1#greetingMessage {
+            color: var(--primary-green);
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-size: clamp(1.8em, 5vw, 2.2em);
+            line-height: 1.3;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        #greetingMessage span.sender-name {
+            color: var(--accent-gold);
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .input-group {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px; /* Reduced gap slightly */
+        }
+
+        label {
+            font-weight: 400;
+            color: var(--text-light);
+            font-size: 1.1em;
+            margin-bottom: 0px; /* Reduced margin */
+        }
+
+        input[type="text"]#senderNameInput {
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            width: 90%;
+            box-sizing: border-box;
+            font-size: 1em;
+            text-align: center;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 10px; /* Added margin below input */
+        }
+
+        input[type="text"]#senderNameInput:focus {
+            border-color: var(--primary-green);
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 100, 0, 0.2);
+        }
+
+        /* --- WhatsApp Share Button Style --- */
+        button#generateShareButton {
+            padding: 10px 20px; /* Slightly adjusted padding */
+            background-color: var(--whatsapp-green); /* WhatsApp Brand Green */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            margin-top: 5px; /* Adjusted margin */
+            box-shadow: 0 4px 8px rgba(0, 100, 0, 0.2);
+            display: inline-flex; /* Use inline-flex for icon alignment */
+            align-items: center;
+            justify-content: center;
+            gap: 8px; /* Space between icon and text */
+        }
+        button#generateShareButton .fab.fa-whatsapp {
+            font-size: 1.3em; /* Make icon slightly larger */
+        }
+
+        button#generateShareButton:hover {
+            background-color: #1ebe57; /* Slightly darker WhatsApp green */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Generic shadow on hover */
+        }
+
+        button#generateShareButton:active {
+            transform: translateY(0px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* --- Fallback Link Display --- */
+        #linkOutput {
+            margin-top: 25px; /* Reduced margin */
+            width: 100%;
+        }
+        #linkOutput p.fallback-info {
+             margin-bottom: 8px;
+             font-size: 0.9em;
+             color: #888;
+        }
+
+        #generatedLink {
+            width: 95%;
+            padding: 10px;
+            border: 1px dashed var(--accent-gold);
+            border-radius: 8px;
+            background-color: #fdfdfd;
+            font-size: 0.95em;
+            box-sizing: border-box;
+            text-align: center;
+            color: var(--text-dark);
+            cursor: text;
+            word-wrap: break-word;
+        }
+
+        /* --- Confetti Canvas --- */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="container">
+        <h1 id="greetingMessage">Eid Mubarak!</h1>
+        <img src="Eid Mubarak.gif" alt="Eid Mubarak Animation" class="eid-gif">
+
+        <div class="input-group">
+            <label for="senderNameInput">Enter Your Name:</label>
+            <input type="text" id="senderNameInput" placeholder="Your Name">
+            <!-- WhatsApp Share Button -->
+            <button id="generateShareButton">
+                <i class="fab fa-whatsapp"></i> Share Link
+            </button>
+        </div>
+
+        <!-- Area to display the generated link (Fallback) -->
+        <div id="linkOutput" style="display: none;">
+             <p class="fallback-info">Web Share not available. Copy the link below:</p>
+            <input type="text" id="generatedLink" readonly>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        // --- Get Query Parameter ---
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // --- Confetti (Increased Intensity) ---
+        function launchConfetti() {
+            const myCanvas = document.getElementById('confetti-canvas');
+            if (!myCanvas) return;
+            const myConfetti = confetti.create(myCanvas, { resize: true, useWorker: true });
+            const confettiColors = ['#FFD700', '#FFFFFF', '#006400', '#b8860b', '#e8f5e9', '#fffdef', '#25D366']; // Added WhatsApp Green
+            const baseParticleCount = 750; // <<< INCREASED BASE PARTICLE COUNT (was 250)
+
+            function fire(particleRatio, opts) {
+                myConfetti(Object.assign({}, {
+                    origin: { y: 0.55 }, // Start slightly lower
+                    colors: confettiColors,
+                    gravity: 0.8 // Slightly stronger gravity
+                 }, opts, {
+                    particleCount: Math.floor(baseParticleCount * particleRatio)
+                }));
+            }
+
+            // More intense bursts
+            setTimeout(() => fire(0.35, { spread: 40, startVelocity: 65 }), 0);
+            setTimeout(() => fire(0.25, { spread: 70, startVelocity: 70 }), 100);
+            setTimeout(() => fire(0.30, { spread: 100, decay: 0.90, scalar: 0.9, startVelocity: 75 }), 200); // Faster decay, larger scalar
+            setTimeout(() => fire(0.20, { spread: 130, startVelocity: 50, decay: 0.92, scalar: 1.1 }), 350);
+            setTimeout(() => fire(0.15, { spread: 160, startVelocity: 60 }), 500);
+             setTimeout(() => fire(0.10, { spread: 180, startVelocity: 65, decay: 0.88 }), 650); // Added another burst
+
+        }
+
+        // --- Display Greeting ---
+        function displayGreeting() {
+            const senderNameEncoded = getQueryParam('from');
+            const greetingElement = document.getElementById('greetingMessage');
+             if (!greetingElement) return;
+
+            if (senderNameEncoded) {
+                try {
+                    const senderName = decodeURIComponent(senderNameEncoded);
+                    const safeSenderName = senderName.replace(/</g, "<").replace(/>/g, ">");
+                    greetingElement.innerHTML = `Eid Mubarak from <span class="sender-name">${safeSenderName}</span>!`;
+                    setTimeout(launchConfetti, 100); // Launch confetti
+                } catch (e) {
+                    console.error("Error decoding sender name:", e);
+                    greetingElement.textContent = 'Eid Mubarak!';
+                }
+            } else {
+                greetingElement.textContent = 'Eid Mubarak!';
+            }
+        }
+
+        // --- Function to display link manually (Fallback) ---
+        function displayLinkForManualCopy(link) {
+            const linkOutputDiv = document.getElementById('linkOutput');
+            const generatedLinkInput = document.getElementById('generatedLink');
+            const fallbackInfo = linkOutputDiv?.querySelector('.fallback-info'); // Optional chaining
+
+             if(!linkOutputDiv || !generatedLinkInput || !fallbackInfo) return;
+
+            generatedLinkInput.value = link;
+            linkOutputDiv.style.display = 'block';
+
+            setTimeout(() => {
+                generatedLinkInput.focus();
+                generatedLinkInput.select();
+                generatedLinkInput.setSelectionRange(0, 99999);
+            }, 50);
+        }
+
+
+        // --- Generate Link & Attempt Share ---
+        async function generateAndShareLink() {
+            const nameInput = document.getElementById('senderNameInput');
+             if (!nameInput) return;
+            const senderName = nameInput.value.trim();
+
+            if (!senderName) {
+                alert("Please enter your name first!");
+                return;
+            }
+
+             const linkOutputDiv = document.getElementById('linkOutput');
+             if(linkOutputDiv) linkOutputDiv.style.display = 'none';
+
+            const encodedName = encodeURIComponent(senderName);
+            let path = window.location.pathname;
+            // Basic check if running locally vs hosted for pathname
+             if (!path.endsWith('.html') && path !== '/') {
+                path = path.endsWith('/') ? path + 'index.html' : path + '/index.html';
+            } else if (path === '/') {
+                 path = '/index.html'; // Assume index.html at root if hosted there
+            }
+            const baseURL = window.location.origin + path.substring(0, path.lastIndexOf('/') + 1); // Get directory path
+            const sharableLink = `${baseURL.replace(/\/$/, '')}${window.location.pathname.substring(window.location.pathname.lastIndexOf('/'))}?from=${encodedName}`; // Construct more robustly
+            // Simplified approach if always index.html:
+            // const sharableLink = `${window.location.origin}${window.location.pathname}?from=${encodedName}`;
+
+
+            const shareData = {
+                title: 'Eid Mubarak Greetings!',
+                text: `✨ Eid Mubarak wishes from ${senderName}! ✨\nCheck this out:`, // Added newline for better formatting in some apps
+                url: sharableLink,
+            };
+
+            if (navigator.share && window.location.protocol === 'https:') {
+                try {
+                    await navigator.share(shareData);
+                    console.log('Link shared successfully via Web Share API!');
+                } catch (error) {
+                    console.error('Web Share API error:', error);
+                    if (error.name === 'AbortError') {
+                        console.log('Share cancelled by user.');
+                         displayLinkForManualCopy(sharableLink); // Show link if cancelled
+                         alert("Share cancelled. You can copy the link below.");
+                    } else {
+                         displayLinkForManualCopy(sharableLink);
+                         alert("Couldn't use native share. Please copy the link below.");
+                    }
+                }
+            } else {
+                console.log("Web Share API not supported or not on HTTPS. Using fallback.");
+                displayLinkForManualCopy(sharableLink);
+                 alert("Native sharing not supported on this browser/connection. Please copy the link shown.");
+            }
+        }
+
+        // --- Event Listeners ---
+        document.addEventListener('DOMContentLoaded', () => {
+            displayGreeting();
+
+            const shareButton = document.getElementById('generateShareButton');
+            if(shareButton) {
+                shareButton.addEventListener('click', generateAndShareLink);
+            } else {
+                console.error("Share button not found!");
+            }
+        });
+
+    </script>
+
+</body>
+</html>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '7c46b95c7c872df3b5d43aedd19e0352',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//allowsalmond.com/7c46b95c7c872df3b5d43aedd19e0352/invoke.js"></script>
